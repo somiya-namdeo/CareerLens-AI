@@ -21,7 +21,7 @@ const LandingPage = () => {
   };
 
   const features = [
-    { title: "OCR Resume Parsing", icon: ScanText, desc: "Extract structured data from any resume format with 96% accuracy." },
+    { title: "OCR Resume Parsing", icon: ScanText, desc: "Extract structured data from any resume format with 84.6% accuracy." },
     { title: "Hire/Reject Prediction", icon: Target, desc: "Evaluate readiness and predict shortlisting probability." },
     { title: "Job Role Prediction", icon: Briefcase, desc: "Match candidates to their ideal career paths and roles." },
     { title: "Salary Forecasting", icon: TrendingUp, desc: "Estimate fair market compensation based on extracted attributes." },
@@ -37,10 +37,10 @@ const LandingPage = () => {
   ];
 
   const models = [
-    { name: "Hire/Reject Prediction", accuracy: "94.0%", type: "Classification" },
-    { name: "Job Role Prediction", accuracy: "89.0%", type: "Multi-Class" },
-    { name: "Salary Prediction", accuracy: "R² 0.88", type: "Regression" },
-    { name: "OCR Classification", accuracy: "96.0%", type: "Vision + NLP" }
+    { name: "Hire/Reject Prediction", accuracy: "94.2%", type: "Classification" },
+    { name: "Job Role Prediction", accuracy: "84.6%", type: "Multi-Class" },
+    { name: "Salary Prediction", accuracy: "R² 0.57", type: "Regression" },
+    { name: "OCR Classification", accuracy: "84.6%", type: "Vision + NLP" }
   ];
 
   return (
@@ -78,26 +78,29 @@ const LandingPage = () => {
           </a>
         </div>
 
-        {/* Animated Pipeline Visual */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm font-mono text-[var(--color-career-text-muted)] bg-[#111614]/50 border border-[var(--color-career-border)] p-4 rounded-xl shadow-inner max-w-2xl mx-auto">
-          <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.8, duration: 0.5 }} className="flex items-center gap-2">
-            <ScanText className="w-4 h-4 text-[var(--color-career-primary)]" /> Resume Upload
-          </motion.div>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}><ArrowRight className="w-4 h-4 text-[var(--color-career-border)] hidden sm:block" /></motion.div>
-          
-          <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.4, duration: 0.5 }} className="flex items-center gap-2">
-            <Zap className="w-4 h-4 text-[var(--color-career-primary)]" /> OCR
-          </motion.div>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.7 }}><ArrowRight className="w-4 h-4 text-[var(--color-career-border)] hidden sm:block" /></motion.div>
-
-          <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 2.0, duration: 0.5 }} className="flex items-center gap-2">
-            <BrainCircuit className="w-4 h-4 text-[var(--color-career-primary)]" /> ML Analysis
-          </motion.div>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.3 }}><ArrowRight className="w-4 h-4 text-[var(--color-career-border)] hidden sm:block" /></motion.div>
-
-          <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 2.6, duration: 0.5 }} className="flex items-center gap-2">
-            <BarChart3 className="w-4 h-4 text-[var(--color-career-secondary)]" /> Career Report
-          </motion.div>
+        {/* Animated Marketing Badges */}
+        <div className="flex flex-wrap items-center justify-center gap-3 max-w-3xl mx-auto">
+          {[
+            "4 Integrated ML Models",
+            "OCR + NLP Resume Processing",
+            "Resume Intelligence Engine",
+            "Hiring Probability Analysis",
+            "Role & Salary Forecasting",
+            "Workforce Intelligence Platform"
+          ].map((badge, i) => (
+            <motion.div 
+              key={badge}
+              initial={{ opacity: 0, scale: 0.9 }} 
+              animate={{ opacity: 1, scale: 1 }} 
+              transition={{ delay: 0.6 + (i * 0.1), duration: 0.4 }} 
+              className="flex items-center gap-2 text-sm font-medium text-[var(--color-career-text)] bg-[#111614]/80 border border-[var(--color-career-border)] px-4 py-2 rounded-full shadow-sm"
+            >
+              <div className="w-4 h-4 rounded-full bg-[var(--color-career-primary)]/20 flex items-center justify-center text-[var(--color-career-primary)]">
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+              </div>
+              {badge}
+            </motion.div>
+          ))}
         </div>
       </motion.section>
 

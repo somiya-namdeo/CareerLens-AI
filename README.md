@@ -12,7 +12,6 @@
   </p>
 
   <p>
-    <strong>Live Demo:</strong> <a href="#">[Insert Vercel URL]</a><br>
     <strong>Backend API:</strong> <a href="https://careerlens-ai-fpzy.onrender.com">https://careerlens-ai-fpzy.onrender.com</a><br>
     <strong>API Documentation:</strong> <a href="https://careerlens-ai-fpzy.onrender.com/docs">https://careerlens-ai-fpzy.onrender.com/docs</a>
   </p>

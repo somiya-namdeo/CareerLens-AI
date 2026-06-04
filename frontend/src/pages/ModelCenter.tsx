@@ -33,6 +33,8 @@ export default function ModelCenter() {
           <h1 className="text-3xl font-bold tracking-tight text-[var(--color-career-text)]">Model Insights</h1>
           <p className="text-[var(--color-career-text-muted)] text-base mt-2">
             Under the hood of CareerLens AI. Four machine learning modules work together to deliver insights.
+            <br />
+            <span className="text-[var(--color-career-primary)] opacity-80 text-sm mt-1 inline-block">* Metrics are based on validation results from project notebooks.</span>
           </p>
         </div>
         <div className="hidden md:flex relative group">

@@ -70,7 +70,7 @@ export default function IntelligenceReport() {
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-[var(--color-career-text)]">Intelligence Report</h1>
           <p className="text-[var(--color-career-text-muted)] text-base mt-2 flex items-center gap-2">
-            Domain: <span className="text-[var(--color-career-secondary)] font-medium">{reportData.ocr_classification}</span> • Generated from 4 ML modules
+            Domain: <span className="text-[var(--color-career-secondary)] font-medium">{reportData.ocr_classification}</span> • Predicted Role: <span className="text-[var(--color-career-secondary)] font-medium">{reportData.predicted_role}</span>
           </p>
         </div>
         <button className="flex items-center gap-2 px-4 py-2 border border-[var(--color-career-border)] rounded-full text-sm hover:bg-white/5 transition-colors text-[var(--color-career-text)] font-medium bg-[#111614]">

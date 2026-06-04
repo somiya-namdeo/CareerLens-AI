@@ -265,9 +265,3 @@ CareerLens-AI/
 ## Author
 
 **Somiya Namdeo**
-
-Focus Areas:
-- Machine Learning
-- Natural Language Processing
-- Computer Vision
-- Full Stack AI Applications

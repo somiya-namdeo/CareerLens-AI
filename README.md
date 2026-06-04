@@ -166,12 +166,10 @@ CareerLens AI utilizes four specialized Machine Learning models trained on curat
 ![Landing Page 2](assets/screenshots/landing-page-02.png)
 
 ### Resume Upload & Analysis
-<<<<<<< HEAD
 ![Upload Resume](assets/upload-01.png)
-![Resume Workspace](assets/resume-02.png)
-=======
+![Resume Workspace](assets/screenshots/resume-02.png)
+
 ![Upload Resume](assets/screenshots/upload-01.png)
->>>>>>> c70485b (Updated README)
 
 ### Results Dashboard
 ![Results 1](assets/screenshots/results-01.png)
@@ -180,14 +178,6 @@ CareerLens AI utilizes four specialized Machine Learning models trained on curat
 ### Model Insights
 ![Model Insights 1](assets/screenshots/model-insights-01.png)
 ![Model Insights 2](assets/screenshots/model-insights-02.png)
-
-
-
-
-=======
-### Resume Workspace
-![Resume Workspace](assets/screenshots/resume-02.png)
-
 ---
 
 ## API Endpoints

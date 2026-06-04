@@ -11,7 +11,7 @@ const ComparisonTable: React.FC = () => {
             <th className="py-4 px-2">Model Name</th>
             <th className="py-4 px-2">Algorithm</th>
             <th className="py-4 px-2 text-right">Accuracy / Metric</th>
-            <th className="py-4 px-2 text-right">F1 Score</th>
+            <th className="py-4 px-2 text-right">F1 Score / RMSE</th>
             <th className="py-4 px-2 text-right">Status</th>
           </tr>
         </thead>
@@ -24,7 +24,7 @@ const ComparisonTable: React.FC = () => {
                 {model.metricType === 'R2' ? `R² ${model.accuracy.toFixed(2)}` : `${(model.accuracy * 100).toFixed(1)}%`}
               </td>
               <td className="py-4 px-2 text-right text-mono text-[var(--color-career-text-muted)]">
-                {model.f1 ? model.f1.toFixed(2) : '-'}
+                {model.f1 ? model.f1.toFixed(2) : (model.rmse ? `RMSE: ${model.rmse}` : '-')}
               </td>
               <td className="py-4 px-2 text-right flex justify-end items-center h-full pt-4">
                 <span className={clsx(

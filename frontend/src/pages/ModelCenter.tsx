@@ -49,10 +49,10 @@ export default function ModelCenter() {
 
       <motion.div variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { title: "Hire / Reject Prediction", acc: "94.0%", icon: Binary, type: "CLASSIFICATION" },
-          { title: "Job Role Prediction", acc: "89.0%", icon: Network, type: "MULTI-CLASS" },
-          { title: "Salary Prediction", acc: "0.88", icon: Cpu, type: "REGRESSION", metric: "R² Score" },
-          { title: "OCR Resume Classification", acc: "96.0%", icon: CheckCircle2, type: "VISION + NLP" },
+          { title: "Hire / Reject Prediction", acc: "94.2%", icon: Binary, type: "CLASSIFICATION" },
+          { title: "Job Role Prediction", acc: "84.6%", icon: Network, type: "MULTI-CLASS" },
+          { title: "Salary Prediction", acc: "0.57", icon: Cpu, type: "REGRESSION", metric: "R² Score" },
+          { title: "OCR Resume Classification", acc: "84.6%", icon: CheckCircle2, type: "VISION + NLP" },
         ].map((m, i) => (
           <motion.div 
             key={i} 

@@ -1,21 +1,6 @@
-import joblib
-import os
 import logging
-import pandas as pd
-import numpy as np
-
-MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', 'models', 'salary_model.pkl')
-COLUMNS_PATH = os.path.join(os.path.dirname(__file__), '..', 'models', 'salary_columns.pkl')
 
 logger = logging.getLogger(__name__)
-
-try:
-    salary_model = joblib.load(MODEL_PATH)
-    salary_columns = joblib.load(COLUMNS_PATH)
-    MODEL_LOADED = True
-except Exception as e:
-    logger.error(f"Failed to load Salary models: {e}")
-    MODEL_LOADED = False
 
 # Deterministic salary table (lower, upper)
 SALARY_TABLE = {

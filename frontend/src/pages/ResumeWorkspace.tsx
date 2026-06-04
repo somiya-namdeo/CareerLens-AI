@@ -25,8 +25,8 @@ export default function ResumeWorkspace() {
     }
   };
 
-  const wordCount = apiResult?.raw_text_preview ? apiResult.raw_text_preview.split(/\s+/).length : '-';
-  const charCount = apiResult?.raw_text_preview ? apiResult.raw_text_preview.length : '-';
+  const wordCount = apiResult?.word_count || '-';
+  const charCount = apiResult?.character_count || '-';
 
   return (
     <motion.div 
@@ -61,7 +61,7 @@ export default function ResumeWorkspace() {
               <div className="bg-[#0A0C0B] p-6 rounded-xl text-sm text-[var(--color-career-text-muted)] font-mono min-h-[300px] flex items-center justify-center border border-[var(--color-career-border)] shadow-inner">
                 {apiResult ? (
                   <div className="text-left w-full h-full whitespace-pre-wrap overflow-y-auto">
-                    {apiResult.raw_text_preview}
+                    {apiResult.extracted_text || apiResult.raw_text_preview || "No text could be extracted from this PDF. Please upload a text-based resume PDF."}
                   </div>
                 ) : selectedFile ? (
                   "Document loaded. Click 'Start Analysis' to extract text and generate insights."
@@ -81,9 +81,9 @@ export default function ResumeWorkspace() {
             </h2>
             <div className="space-y-4">
               {[
-                { label: 'Pages', value: apiResult ? '1' : '-' },
-                { label: 'Word Count', value: apiResult ? `~${wordCount}+` : '-' },
-                { label: 'Character Count', value: apiResult ? `~${charCount}+` : '-' },
+                { label: 'Pages', value: apiResult ? apiResult.page_count || '1' : '-' },
+                { label: 'Word Count', value: apiResult ? `~${wordCount}` : '-' },
+                { label: 'Character Count', value: apiResult ? `~${charCount}` : '-' },
                 { label: 'Language', value: apiResult ? 'English (en)' : '-' }
               ].map((meta, i) => (
                 <div key={i} className="flex justify-between items-center py-2 border-b border-[var(--color-career-border)] last:border-0 last:pb-0">

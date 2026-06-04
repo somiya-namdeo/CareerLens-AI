@@ -90,7 +90,8 @@ async def analyze_resume(file: UploadFile = File(...)):
     
     try:
         # Step 1: Parse PDF text
-        parsed_text = pdf_parser.extract_text(file_path)
+        extraction_data = pdf_parser.extract_text(file_path)
+        parsed_text = extraction_data["extracted_text"]
         
         # Step 2: Extract skills (OCR Classification logic / NLP)
         verified_skills = skill_extractor.extract_skills(parsed_text)
@@ -139,7 +140,8 @@ async def analyze_resume(file: UploadFile = File(...)):
         ]
         
         # Limit raw text preview length
-        raw_text_preview = parsed_text[:500] + "..." if len(parsed_text) > 500 else parsed_text
+        raw_text_preview = parsed_text[:700] + "..." if len(parsed_text) > 700 else parsed_text
+        extracted_text_out = parsed_text[:3000]
         
         return {
             "resume_score": resume_score,
@@ -151,7 +153,12 @@ async def analyze_resume(file: UploadFile = File(...)):
             "verified_skills": verified_skills,
             "missing_skills": missing_skills,
             "recommendations": recommendations,
-            "raw_text_preview": raw_text_preview
+            "raw_text_preview": raw_text_preview,
+            "extracted_text": extracted_text_out,
+            "page_count": extraction_data["page_count"],
+            "word_count": extraction_data["word_count"],
+            "character_count": extraction_data["character_count"],
+            "extraction_method": extraction_data["extraction_method"]
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Analysis failed: {str(e)}")

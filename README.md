@@ -151,6 +151,7 @@ CareerLens AI utilizes four specialized Machine Learning models trained on propr
 
 ### Resume Upload & Analysis
 ![Upload Resume](assets/upload-01.png)
+![Resume Workspace](assets/resume-02.png)
 
 ### Results Dashboard
 ![Results 1](assets/results-01.png)
@@ -160,8 +161,8 @@ CareerLens AI utilizes four specialized Machine Learning models trained on propr
 ![Model Insights 1](assets/model-insights-01.png)
 ![Model Insights 2](assets/model-insights-02.png)
 
-### Resume Workspace
-![Resume Workspace](assets/resume-02.png)
+
+
 
 ---
 

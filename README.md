@@ -269,8 +269,6 @@ CareerLens-AI/
 
 **Somiya Namdeo**
 
-AI/ML Engineer | Full Stack Developer
-
 Focus Areas:
 - Machine Learning
 - Natural Language Processing

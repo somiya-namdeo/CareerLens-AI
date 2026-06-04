@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import MetricCard from '../components/ui/MetricCard';
 import SkillBadge from '../components/ui/SkillBadge';
 import { Target, Briefcase, DollarSign, BrainCircuit, AlertTriangle, Lightbulb, Download, ArrowLeft } from 'lucide-react';

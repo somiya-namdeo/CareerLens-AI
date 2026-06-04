@@ -5,6 +5,7 @@
   <p><strong>Advanced AI-Powered Resume Intelligence Platform</strong></p>
 
   <p>
+<<<<<<< HEAD
     <a href="https://careerlens-ai-fpzy.onrender.com"><img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white" alt="Render" /></a>
     <a href="#"><img src="https://img.shields.io/badge/Frontend-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" /></a>
     <img src="https://img.shields.io/badge/Machine%20Learning-Python%20%7C%20Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Machine Learning" />
@@ -13,6 +14,9 @@
 
   <p>
     <strong>Live Application:</strong> <a href="https://career-lens-ai-two.vercel.app/">https://careerlens-ai.vercel.app</a><br>
+=======
+    <strong>Live Application:</strong> <a href="https://careerlens-ai.vercel.app">https://careerlens-ai.vercel.app</a><br>
+>>>>>>> c70485b (Updated README)
     <strong>Backend API:</strong> <a href="https://careerlens-ai-fpzy.onrender.com">https://careerlens-ai-fpzy.onrender.com</a><br>
     <strong>API Documentation:</strong> <a href="https://careerlens-ai-fpzy.onrender.com/docs">https://careerlens-ai-fpzy.onrender.com/docs</a>
   </p>
@@ -31,16 +35,26 @@ Built as a full-stack, end-to-end Machine Learning web application, CareerLens A
 ## Project Highlights
 
 - Full-Stack AI Resume Intelligence Platform
-- OCR-Based Resume Parsing
-- Resume Scoring Engine
-- Job Role Prediction
-- Salary Estimation
+- OCR + NLP Resume Parsing Pipeline
+- Multi-Model Machine Learning Inference Engine
+- Real-Time Skill Gap Analysis
+- Job Role Prediction & Salary Forecasting
 - Hire Probability Prediction
-- Skill Gap Analysis
-- FastAPI Backend
-- React Frontend
-- Machine Learning Inference Pipeline
-- Render + Vercel Deployment
+- FastAPI REST Backend
+- React + TypeScript Frontend
+- Production Deployment using Vercel & Render
+- Interactive Resume Intelligence Dashboard
+
+## Project Statistics
+
+- 4 Machine Learning Models
+- OCR Resume Processing Pipeline
+- FastAPI REST API Backend
+- React + TypeScript Frontend
+- Render Backend Deployment
+- Vercel Frontend Deployment
+- Resume Intelligence Dashboard
+- Real-Time Inference System
 
 ---
 
@@ -49,7 +63,7 @@ Built as a full-stack, end-to-end Machine Learning web application, CareerLens A
 - **Resume Upload & Parsing:** High-fidelity text extraction via PyMuPDF.
 - **OCR Text Extraction:** Image-to-text fallback digitization for non-text-based resumes.
 - **Resume Intelligence Report:** A comprehensive, visually stunning breakdown of candidate viability.
-- **Job Role Prediction:** Automatic classification of candidate domains based on historical NLP data.
+- **Job Role Prediction:** Automatic classification of candidate domains based on curated HR and resume datasets.
 - **Salary Estimation:** Market-aligned salary forecasting (R² Score: 0.57) based on skills and seniority.
 - **Hire Probability Prediction:** Random Forest modeling calculating the exact likelihood of a successful hire (94.2% Accuracy).
 - **Verified & Missing Skills Detection:** Automated technical skill gap analysis.
@@ -64,14 +78,22 @@ Built as a full-stack, end-to-end Machine Learning web application, CareerLens A
 
 ### Frontend
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+<<<<<<< HEAD
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+=======
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=blue)
+>>>>>>> c70485b (Updated README)
 
 ### Backend
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+<<<<<<< HEAD
 ![Uvicorn](https://img.shields.io/badge/Uvicorn-111827?style=for-the-badge)
 ![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
 
@@ -88,6 +110,23 @@ Built as a full-stack, end-to-end Machine Learning web application, CareerLens A
 ### Deployment
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black)
+=======
+![Uvicorn](https://img.shields.io/badge/Uvicorn-499848?style=for-the-badge&logo=uvicorn&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
+
+### Machine Learning
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+
+### Deployment
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
+
+---
+
+>>>>>>> c70485b (Updated README)
 ## System Architecture
 
 ```mermaid
@@ -111,11 +150,15 @@ RolePrediction --> IntelligenceReport
 SalaryPrediction --> IntelligenceReport
 OCRClassification --> IntelligenceReport
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> c70485b (Updated README)
 ---
 
 ## Machine Learning Models & Performance
 
-CareerLens AI utilizes four specialized Machine Learning models trained on proprietary HR datasets. 
+CareerLens AI utilizes four specialized Machine Learning models trained on curated HR and resume datasets. 
 
 | Pipeline Objective | Algorithm | Primary Metric | Score |
 | :--- | :--- | :--- | :--- |
@@ -129,27 +172,36 @@ CareerLens AI utilizes four specialized Machine Learning models trained on propr
 ## Platform Screenshots
 
 ### Landing Page
-![Landing Page 1](assets/landing-page-01.png)
-![Landing Page 2](assets/landing-page-02.png)
+![Landing Page 1](assets/screenshots/landing-page-01.png)
+![Landing Page 2](assets/screenshots/landing-page-02.png)
 
 ### Resume Upload & Analysis
+<<<<<<< HEAD
 ![Upload Resume](assets/upload-01.png)
 ![Resume Workspace](assets/resume-02.png)
+=======
+![Upload Resume](assets/screenshots/upload-01.png)
+>>>>>>> c70485b (Updated README)
 
 ### Results Dashboard
-![Results 1](assets/results-01.png)
-![Results 2](assets/results-02.png)
+![Results 1](assets/screenshots/results-01.png)
+![Results 2](assets/screenshots/results-02.png)
 
 ### Model Insights
-![Model Insights 1](assets/model-insights-01.png)
-![Model Insights 2](assets/model-insights-02.png)
+![Model Insights 1](assets/screenshots/model-insights-01.png)
+![Model Insights 2](assets/screenshots/model-insights-02.png)
+
+<<<<<<< HEAD
 
 
-
+=======
+### Resume Workspace
+![Resume Workspace](assets/screenshots/resume-02.png)
+>>>>>>> c70485b (Updated README)
 
 ---
 
-## Backend API Endpoints
+## API Endpoints
 
 ### `POST /api/analyze-resume`
 Extracts, parses, and runs inference on a candidate's resume.
@@ -183,7 +235,7 @@ Extracts, parses, and runs inference on a candidate's resume.
 
 ---
 
-## Local Setup Instructions
+## Local Setup
 
 ### 1. Backend (FastAPI)
 ```bash
@@ -235,6 +287,7 @@ CareerLens-AI/
 ├── notebooks/            # Jupyter Notebooks (Model Training & EDA)
 ├── datasets/             # Training Data & Corpora
 ├── assets/               # README assets and documentation images
+│   └── screenshots/
 └── README.md
 ```
 
@@ -250,4 +303,17 @@ CareerLens-AI/
 
 ## Author
 
+<<<<<<< HEAD
 **Somiya Namdeo**
+=======
+Somiya Namdeo
+
+AI/ML Engineer | Full Stack Developer
+
+Areas of Interest:
+- Machine Learning
+- Natural Language Processing
+- Computer Vision
+- MLOps
+- Full Stack AI Systems
+>>>>>>> c70485b (Updated README)

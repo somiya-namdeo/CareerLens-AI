@@ -63,34 +63,31 @@ Built as a full-stack, end-to-end Machine Learning web application, CareerLens A
 ## Technology Stack
 
 ### Frontend
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- Framer Motion
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
 ### Backend
-- FastAPI
-- Python
-- Uvicorn
-- Pydantic
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Uvicorn](https://img.shields.io/badge/Uvicorn-111827?style=for-the-badge)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
 
 ### Machine Learning
-- Scikit-Learn
-- Pandas
-- NumPy
-- TF-IDF
-- Random Forest
-- Logistic Regression
-- PyMuPDF
-- OCR Processing
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![TF-IDF](https://img.shields.io/badge/TF--IDF-111827?style=for-the-badge)
+![Random Forest](https://img.shields.io/badge/Random_Forest-0F766E?style=for-the-badge)
+![Logistic Regression](https://img.shields.io/badge/Logistic_Regression-7C3AED?style=for-the-badge)
+![PyMuPDF](https://img.shields.io/badge/PyMuPDF-16A34A?style=for-the-badge)
+![OCR Processing](https://img.shields.io/badge/OCR_Processing-DC2626?style=for-the-badge)
 
 ### Deployment
-- Vercel
-- Render
-
----
-
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black)
 ## System Architecture
 
 ```mermaid

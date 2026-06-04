@@ -141,7 +141,6 @@ SalaryPrediction --> IntelligenceReport
 OCRClassification --> IntelligenceReport
 ```
 
-=======
 
 
 ---
@@ -166,8 +165,9 @@ CareerLens AI utilizes four specialized Machine Learning models trained on curat
 ![Landing Page 2](assets/screenshots/landing-page-02.png)
 
 ### Resume Upload & Analysis
-![Upload Resume](assets/upload-01.png)
+
 ![Resume Workspace](assets/screenshots/resume-02.png)
+![Upload Resume](assets/upload-01.png)
 
 ![Upload Resume](assets/screenshots/upload-01.png)
 

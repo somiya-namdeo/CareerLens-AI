@@ -5,7 +5,7 @@
   <p><strong>Advanced AI-Powered Resume Intelligence Platform</strong></p>
 
   <p>
-   <<a href="https://careerlens-ai-fpzy.onrender.com"><img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white" alt="Render" /></a>
+   <a href="https://careerlens-ai-fpzy.onrender.com"><img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white" alt="Render" /></a>
     <a href="#"><img src="https://img.shields.io/badge/Frontend-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" /></a>
     <img src="https://img.shields.io/badge/Machine%20Learning-Python%20%7C%20Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Machine Learning" />
     <img src="https://img.shields.io/badge/Author-Somiya%20Namdeo-blue?style=for-the-badge" alt="Author" />

@@ -40,11 +40,14 @@ async def analyze_resume(file: UploadFile = File(...)):
         # Step 5: Predict Salary
         estimated_salary = salary_predictor.predict_salary(predicted_role, verified_skills)
         
-        # Step 6: Predict Hire/Reject
-        hire_probability = hire_predictor.predict_hire_probability(parsed_text, verified_skills, predicted_role)
+        # Step 6: Predict Hire/Reject (Raw Model)
+        model_hire_probability = hire_predictor.predict_hire_probability(parsed_text, verified_skills, predicted_role)
         
         # Step 7: Score Resume
-        resume_score = resume_scorer.score_resume(verified_skills, missing_skills, hire_probability)
+        resume_score = resume_scorer.score_resume(verified_skills, missing_skills, model_hire_probability)
+        
+        # Calibrate Hire Probability
+        calibrated_hire_probability = int((0.65 * model_hire_probability) + (0.35 * resume_score))
         
         # Recommendations Mock
         recommendations = [
@@ -57,7 +60,8 @@ async def analyze_resume(file: UploadFile = File(...)):
         
         return {
             "resume_score": resume_score,
-            "hire_probability": hire_probability,
+            "hire_probability": calibrated_hire_probability,
+            "model_hire_probability": model_hire_probability,
             "predicted_role": predicted_role,
             "ocr_classification": ocr_classification,
             "estimated_salary": estimated_salary,

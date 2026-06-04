@@ -17,10 +17,10 @@ export const PIPELINE_STEPS = [
 ];
 
 export const MODELS_DATA = [
-  { name: 'Hire / Reject Prediction', algorithm: 'XGBoost', accuracy: 0.92, f1: 0.89, status: 'Active' },
-  { name: 'Job Role Classification', algorithm: 'BERT', accuracy: 0.94, f1: 0.93, status: 'Active' },
-  { name: 'Salary Forecasting', algorithm: 'Random Forest', accuracy: 0.88, f1: 0.85, status: 'Active' },
-  { name: 'OCR & Parsing', algorithm: 'Tesseract & SpaCy', accuracy: 0.96, f1: 0.95, status: 'Active' },
+  { name: 'Hire / Reject Prediction', algorithm: 'Random Forest Classifier', accuracy: 0.94, f1: 0.92, status: 'Active' },
+  { name: 'Job Role Prediction', algorithm: 'Logistic Regression / TF-IDF', accuracy: 0.89, f1: 0.87, status: 'Active' },
+  { name: 'Salary Prediction', algorithm: 'Regression Model', accuracy: 0.88, f1: null, metricType: 'R2', status: 'Active' },
+  { name: 'OCR Resume Classification', algorithm: 'TF-IDF + SVM', accuracy: 0.96, f1: 0.95, status: 'Active' },
 ];
 
 export const CANDIDATE_REPORT = {

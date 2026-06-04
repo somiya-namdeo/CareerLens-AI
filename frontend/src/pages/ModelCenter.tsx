@@ -1,94 +1,93 @@
 import ComparisonTable from '../components/ui/ComparisonTable';
-import { Cpu, Network, Binary, CheckCircle2 } from 'lucide-react';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { Cpu, Network, Binary, CheckCircle2, Search } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const performanceData = [
-  { epoch: 1, val_loss: 0.8, train_loss: 0.9 },
-  { epoch: 2, val_loss: 0.6, train_loss: 0.7 },
-  { epoch: 3, val_loss: 0.45, train_loss: 0.5 },
-  { epoch: 4, val_loss: 0.35, train_loss: 0.38 },
-  { epoch: 5, val_loss: 0.28, train_loss: 0.3 },
-  { epoch: 6, val_loss: 0.25, train_loss: 0.25 },
-  { epoch: 7, val_loss: 0.22, train_loss: 0.2 },
-];
 
 export default function ModelCenter() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
   return (
-    <div className="space-y-8">
-      <div>
-        <h1 className="text-2xl font-bold tracking-tight text-[var(--color-career-text)]">Model Center</h1>
-        <p className="text-[var(--color-career-text-muted)] text-sm mt-1">Machine Learning Production Models Monitoring</p>
-      </div>
+    <motion.div 
+      className="space-y-8"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div variants={itemVariants} className="flex justify-between items-end">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-[var(--color-career-text)]">Model Insights</h1>
+          <p className="text-[var(--color-career-text-muted)] text-base mt-2">
+            Under the hood of CareerLens AI. Four machine learning modules work together to deliver insights.
+          </p>
+        </div>
+        <div className="hidden md:flex relative group">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-career-text-muted)] group-focus-within:text-[var(--color-career-primary)] transition-colors" />
+          <input 
+            type="text" 
+            placeholder="Search models or metrics..." 
+            className="pl-10 pr-4 py-2 bg-[#111614] border border-[var(--color-career-border)] text-sm rounded-full focus:outline-none focus:border-[var(--color-career-primary)] transition-colors w-64 text-[var(--color-career-text)] placeholder-[var(--color-career-text-muted)] shadow-inner"
+          />
+        </div>
+      </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <motion.div variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { title: "Hire/Reject Model", acc: "92.4%", icon: Binary },
-          { title: "Job Role Predictor", acc: "94.1%", icon: Network },
-          { title: "Salary Estimator", acc: "88.2%", icon: Cpu },
-          { title: "OCR Classification", acc: "96.5%", icon: CheckCircle2 },
+          { title: "Hire / Reject Prediction", acc: "94.0%", icon: Binary, type: "CLASSIFICATION" },
+          { title: "Job Role Prediction", acc: "89.0%", icon: Network, type: "MULTI-CLASS" },
+          { title: "Salary Prediction", acc: "0.88", icon: Cpu, type: "REGRESSION", metric: "R² Score" },
+          { title: "OCR Resume Classification", acc: "96.0%", icon: CheckCircle2, type: "VISION + NLP" },
         ].map((m, i) => (
-          <div key={i} className="panel p-5 border-t-2 border-t-[var(--color-career-primary)]">
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="font-semibold text-sm text-[var(--color-career-text)]">{m.title}</h3>
-              <m.icon className="w-4 h-4 text-[var(--color-career-text-muted)]" />
+          <motion.div 
+            key={i} 
+            variants={itemVariants}
+            whileHover={{ y: -5, boxShadow: "0 10px 30px -15px rgba(0,194,122,0.15)" }}
+            className="bg-[var(--color-career-panel)] p-6 rounded-2xl border border-[var(--color-career-border)] flex flex-col transition-all shadow-lg relative overflow-hidden group"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-career-primary)]/5 blur-[40px] rounded-full group-hover:bg-[var(--color-career-primary)]/10 transition-colors" />
+            <div className="flex justify-between items-start mb-6 relative z-10">
+              <div className="w-10 h-10 rounded-xl bg-[#0A0C0B] border border-[var(--color-career-border)] flex items-center justify-center">
+                <m.icon className="w-5 h-5 text-[var(--color-career-primary)]" />
+              </div>
+              <span className="text-[10px] font-bold text-[var(--color-career-text-muted)] uppercase tracking-widest bg-black/40 px-2 py-1 rounded border border-[var(--color-career-border)]">
+                {m.type}
+              </span>
             </div>
-            <div className="text-2xl font-bold text-mono text-[var(--color-career-text)]">{m.acc}</div>
-            <div className="text-xs text-[var(--color-career-text-muted)] mt-1">Production Accuracy</div>
-          </div>
+            <h3 className="font-bold text-lg text-[var(--color-career-text)] mb-1 relative z-10">{m.title}</h3>
+            
+            <div className="mt-6 pt-4 border-t border-[var(--color-career-border)] flex items-end justify-between relative z-10">
+              <span className="text-sm text-[var(--color-career-text-muted)]">{m.metric || "Accuracy"}</span>
+              <span className="text-2xl font-bold text-mono text-[var(--color-career-primary)]">{m.acc}</span>
+            </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2 panel p-6">
-          <h2 className="text-lg font-semibold text-[var(--color-career-text)] mb-6 flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-[var(--color-career-primary)]"></div>
+      <div className="grid grid-cols-1 gap-8">
+        <motion.div variants={itemVariants} className="bg-[var(--color-career-panel)] p-8 rounded-3xl border border-[var(--color-career-border)] shadow-xl overflow-hidden">
+          <h2 className="text-lg font-bold text-[var(--color-career-text)] mb-6 flex items-center gap-2">
+            <div className="w-3 h-3 rounded-full bg-[var(--color-career-primary)] shadow-[0_0_10px_rgba(0,194,122,0.5)]"></div>
             Model Comparison
           </h2>
-          <ComparisonTable />
-        </div>
-
-        <div className="panel p-6">
-          <h2 className="text-sm font-semibold text-[var(--color-career-text-muted)] uppercase tracking-wider mb-6 flex items-center gap-2">
-            <Network className="w-4 h-4 text-[var(--color-career-primary)]" />
-            Training Performance
-          </h2>
-          <div className="h-[250px] w-full mt-4">
-            <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={performanceData} margin={{ top: 0, right: 0, left: -20, bottom: 0 }}>
-                <defs>
-                  <linearGradient id="colorTrain" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="var(--color-career-primary)" stopOpacity={0.3}/>
-                    <stop offset="95%" stopColor="var(--color-career-primary)" stopOpacity={0}/>
-                  </linearGradient>
-                  <linearGradient id="colorVal" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="var(--color-career-secondary)" stopOpacity={0.3}/>
-                    <stop offset="95%" stopColor="var(--color-career-secondary)" stopOpacity={0}/>
-                  </linearGradient>
-                </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="var(--color-career-border)" vertical={false} />
-                <XAxis dataKey="epoch" stroke="var(--color-career-text-muted)" fontSize={12} tickLine={false} axisLine={false} />
-                <YAxis stroke="var(--color-career-text-muted)" fontSize={12} tickLine={false} axisLine={false} />
-                <Tooltip 
-                  contentStyle={{ backgroundColor: 'var(--color-career-panel)', borderColor: 'var(--color-career-border)', borderRadius: '4px' }}
-                  itemStyle={{ color: 'var(--color-career-text)' }}
-                />
-                <Area type="monotone" dataKey="train_loss" stroke="var(--color-career-primary)" fillOpacity={1} fill="url(#colorTrain)" />
-                <Area type="monotone" dataKey="val_loss" stroke="var(--color-career-secondary)" fillOpacity={1} fill="url(#colorVal)" />
-              </AreaChart>
-            </ResponsiveContainer>
+          <div className="overflow-x-auto">
+            <ComparisonTable />
           </div>
-          <div className="flex items-center justify-center gap-6 mt-4">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-[var(--color-career-primary)]"></div>
-              <span className="text-xs text-[var(--color-career-text-muted)]">Train Loss</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-[var(--color-career-secondary)]"></div>
-              <span className="text-xs text-[var(--color-career-text-muted)]">Val Loss</span>
-            </div>
-          </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

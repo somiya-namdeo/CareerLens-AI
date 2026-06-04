@@ -12,8 +12,8 @@
   </p>
 
   <p>
-    <strong>Live Application:</strong> <a href="https://careerlens-ai.vercel.app">https://careerlens-ai.vercel.app</a><br>
-    <strong>Backend API:</strong> <a href="https://careerlens-ai-fpzy.onrender.com">https://careerlens-ai-fpzy.onrender.com</a><br>
+    <strong>Live Application:</strong> <a href="https://career-lens-ai-two.vercel.app/">https://careerlens-ai.vercel.app</a><br>
+    <strong>Backend API:</strong> <a href="https://careerlens-ai-fpzy.onrender.com/">https://careerlens-ai-fpzy.onrender.com</a><br>
     <strong>API Documentation:</strong> <a href="https://careerlens-ai-fpzy.onrender.com/docs">https://careerlens-ai-fpzy.onrender.com/docs</a>
   </p>
 </div>

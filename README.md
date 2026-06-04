@@ -286,6 +286,3 @@ CareerLens-AI/
 
 **Somiya Namdeo**
 
-- MLOps
-- Full Stack AI Systems
->>>>>>> c70485b (Updated README)

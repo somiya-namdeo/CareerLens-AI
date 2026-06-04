@@ -132,7 +132,7 @@ async def analyze_resume(file: UploadFile = File(...)):
             # General cap if not exceptional
             calibrated_hire_probability = min(calibrated_hire_probability, 90)
             
-        # Recommendations Mock
+        # Generate Recommendations
         recommendations = [
             f"Consider obtaining certifications relevant to {final_role}.",
             "Highlight measurable impacts in your previous project experiences."

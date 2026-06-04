@@ -10,18 +10,11 @@ logger = logging.getLogger(__name__)
 BASE_DIR = Path(__file__).resolve().parent.parent
 MODEL_PATH = BASE_DIR / "models" / "hire_reject_pipeline.pkl"
 
-print(f"Looking for pipeline at: {MODEL_PATH}")
-print(f"File exists: {MODEL_PATH.exists()}")
-print(f"sklearn version: {sklearn.__version__}")
-print(f"joblib version: {joblib.__version__}")
-
 try:
     hire_pipeline = joblib.load(MODEL_PATH)
-    print("Hire pipeline loaded successfully")
     logger.info("Hire/Reject pipeline loaded successfully.")
     MODEL_LOADED = True
 except Exception as e:
-    print(f"Pipeline load error: {type(e).__name__}: {e}")
     logger.error(f"Failed to load Hire/Reject pipeline: {e}")
     hire_pipeline = None
     MODEL_LOADED = False

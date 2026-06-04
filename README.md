@@ -166,10 +166,11 @@ CareerLens AI utilizes four specialized Machine Learning models trained on curat
 
 ### Resume Upload & Analysis
 
-![Resume Workspace](assets/screenshots/resume-02.png)
-![Upload Resume](assets/upload-01.png)
-
 ![Upload Resume](assets/screenshots/upload-01.png)
+![Resume Workspace](assets/screenshots/resume-02.png)
+
+
+
 
 ### Results Dashboard
 ![Results 1](assets/screenshots/results-01.png)

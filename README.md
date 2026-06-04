@@ -5,8 +5,7 @@
   <p><strong>Advanced AI-Powered Resume Intelligence Platform</strong></p>
 
   <p>
-<<<<<<< HEAD
-    <a href="https://careerlens-ai-fpzy.onrender.com"><img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white" alt="Render" /></a>
+   <<a href="https://careerlens-ai-fpzy.onrender.com"><img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white" alt="Render" /></a>
     <a href="#"><img src="https://img.shields.io/badge/Frontend-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" /></a>
     <img src="https://img.shields.io/badge/Machine%20Learning-Python%20%7C%20Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Machine Learning" />
     <img src="https://img.shields.io/badge/Author-Somiya%20Namdeo-blue?style=for-the-badge" alt="Author" />
@@ -14,7 +13,6 @@
 
   <p>
     <strong>Live Application:</strong> <a href="https://career-lens-ai-two.vercel.app/">https://careerlens-ai.vercel.app</a><br>
-=======
     <strong>Live Application:</strong> <a href="https://careerlens-ai.vercel.app">https://careerlens-ai.vercel.app</a><br>
 >>>>>>> c70485b (Updated README)
     <strong>Backend API:</strong> <a href="https://careerlens-ai-fpzy.onrender.com">https://careerlens-ai-fpzy.onrender.com</a><br>
@@ -126,7 +124,6 @@ Built as a full-stack, end-to-end Machine Learning web application, CareerLens A
 
 ---
 
->>>>>>> c70485b (Updated README)
 ## System Architecture
 
 ```mermaid
@@ -150,10 +147,10 @@ RolePrediction --> IntelligenceReport
 SalaryPrediction --> IntelligenceReport
 OCRClassification --> IntelligenceReport
 ```
-<<<<<<< HEAD
+
 =======
 
->>>>>>> c70485b (Updated README)
+
 ---
 
 ## Machine Learning Models & Performance
@@ -191,13 +188,12 @@ CareerLens AI utilizes four specialized Machine Learning models trained on curat
 ![Model Insights 1](assets/screenshots/model-insights-01.png)
 ![Model Insights 2](assets/screenshots/model-insights-02.png)
 
-<<<<<<< HEAD
+
 
 
 =======
 ### Resume Workspace
 ![Resume Workspace](assets/screenshots/resume-02.png)
->>>>>>> c70485b (Updated README)
 
 ---
 
@@ -303,17 +299,9 @@ CareerLens-AI/
 
 ## Author
 
-<<<<<<< HEAD
+
 **Somiya Namdeo**
-=======
-Somiya Namdeo
 
-AI/ML Engineer | Full Stack Developer
-
-Areas of Interest:
-- Machine Learning
-- Natural Language Processing
-- Computer Vision
 - MLOps
 - Full Stack AI Systems
 >>>>>>> c70485b (Updated README)

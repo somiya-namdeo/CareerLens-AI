@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="frontend/src/assets/careerlens-logo.png" alt="CareerLens AI Logo" width="120" />
+  <img src="frontend/src/assets/logo/careerlens-logo.png" alt="CareerLens AI Logo" width="120" />
 
   <h1>CareerLens AI</h1>
   <p><strong>Advanced AI-Powered Resume Intelligence Platform</strong></p>

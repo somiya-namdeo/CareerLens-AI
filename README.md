@@ -111,20 +111,6 @@ RolePrediction --> IntelligenceReport
 SalaryPrediction --> IntelligenceReport
 OCRClassification --> IntelligenceReport
 ```
-
-## Inference Workflow
-
-```mermaid
-graph LR
-    A[Resume Upload] --> B[OCR Extraction]
-    B --> C[Text Processing]
-    C --> D[Skill Extraction]
-    D --> E[Role Prediction]
-    E --> F[Salary Prediction]
-    F --> G[Hire Probability Prediction]
-    G --> H[Intelligence Report Generation]
-```
-
 ---
 
 ## Machine Learning Models & Performance

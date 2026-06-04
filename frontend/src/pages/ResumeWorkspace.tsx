@@ -1,8 +1,13 @@
 import UploadPanel from '../components/ui/UploadPanel';
 import { Database, FileTerminal, LayoutTemplate } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import clsx from 'clsx';
 
 export default function ResumeWorkspace() {
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [apiResult, setApiResult] = useState<any>(null);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
@@ -20,6 +25,9 @@ export default function ResumeWorkspace() {
     }
   };
 
+  const wordCount = apiResult?.raw_text_preview ? apiResult.raw_text_preview.split(/\s+/).length : '-';
+  const charCount = apiResult?.raw_text_preview ? apiResult.raw_text_preview.length : '-';
+
   return (
     <motion.div 
       className="space-y-8"
@@ -35,7 +43,7 @@ export default function ResumeWorkspace() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 space-y-8">
           <motion.div variants={itemVariants}>
-            <UploadPanel />
+            <UploadPanel onFileSelect={setSelectedFile} onAnalysisComplete={setApiResult} />
           </motion.div>
           
           <motion.div variants={itemVariants} className="bg-[var(--color-career-panel)] rounded-2xl border border-[var(--color-career-border)] overflow-hidden shadow-lg">
@@ -45,13 +53,21 @@ export default function ResumeWorkspace() {
                 OCR Extraction Output
               </h2>
               <span className="px-3 py-1 rounded-full bg-black/40 text-xs font-medium text-[var(--color-career-text-muted)] font-mono border border-[var(--color-career-border)]">
-                WAITING FOR INPUT
+                {apiResult ? 'EXTRACTION COMPLETE' : selectedFile ? 'READY FOR ANALYSIS' : 'WAITING FOR INPUT'}
               </span>
             </div>
             
             <div className="p-6">
               <div className="bg-[#0A0C0B] p-6 rounded-xl text-sm text-[var(--color-career-text-muted)] font-mono min-h-[300px] flex items-center justify-center border border-[var(--color-career-border)] shadow-inner">
-                No document loaded. Upload a resume to view OCR output.
+                {apiResult ? (
+                  <div className="text-left w-full h-full whitespace-pre-wrap overflow-y-auto">
+                    {apiResult.raw_text_preview}
+                  </div>
+                ) : selectedFile ? (
+                  "Document loaded. Click 'Start Analysis' to extract text and generate insights."
+                ) : (
+                  "No document loaded. Upload a resume to view OCR output."
+                )}
               </div>
             </div>
           </motion.div>
@@ -61,18 +77,18 @@ export default function ResumeWorkspace() {
           <motion.div variants={itemVariants} className="bg-[var(--color-career-panel)] p-6 rounded-2xl border border-[var(--color-career-border)] shadow-lg">
             <h2 className="text-sm font-semibold text-[var(--color-career-text-muted)] uppercase tracking-wider mb-6 flex items-center gap-2">
               <Database className="w-4 h-4 text-[var(--color-career-secondary)]" />
-              Document Metadata
+              Document Statistics
             </h2>
             <div className="space-y-4">
               {[
-                { label: 'File Name', value: '-' },
-                { label: 'File Size', value: '-' },
-                { label: 'Pages', value: '-' },
-                { label: 'Language', value: '-' }
+                { label: 'Pages', value: apiResult ? '1' : '-' },
+                { label: 'Word Count', value: apiResult ? `~${wordCount}+` : '-' },
+                { label: 'Character Count', value: apiResult ? `~${charCount}+` : '-' },
+                { label: 'Language', value: apiResult ? 'English (en)' : '-' }
               ].map((meta, i) => (
                 <div key={i} className="flex justify-between items-center py-2 border-b border-[var(--color-career-border)] last:border-0 last:pb-0">
                   <span className="text-sm text-[var(--color-career-text-muted)]">{meta.label}</span>
-                  <span className="text-sm font-medium text-mono text-[var(--color-career-text)]">{meta.value}</span>
+                  <span className="text-sm font-medium font-mono text-[var(--color-career-text)] truncate max-w-[150px]">{meta.value}</span>
                 </div>
               ))}
             </div>
@@ -84,13 +100,13 @@ export default function ResumeWorkspace() {
               Extraction Pipeline
             </h2>
             <div className="space-y-6 relative before:absolute before:inset-0 before:ml-2.5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-[var(--color-career-border)] before:to-transparent">
-              {['Text Parsing', 'Named Entity Recognition', 'Skill Extraction', 'Experience Mapping'].map((step, i) => (
-                <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                  <div className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-[var(--color-career-border)] bg-[#0A0C0B] text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-[.is-active]:border-[var(--color-career-primary)] group-[.is-active]:bg-[var(--color-career-primary)]/10 group-[.is-active]:text-[var(--color-career-primary)] z-10 transition-colors">
+              {['Text Parsing', 'OCR Extraction', 'Skill Extraction', 'Role Prediction', 'Salary Prediction', 'Hire Probability'].map((step, i) => (
+                <div key={i} className={clsx("relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group", apiResult ? "is-active" : "")}>
+                  <div className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-[var(--color-career-border)] bg-[#0A0C0B] text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-[.is-active]:border-[var(--color-career-primary)] group-[.is-active]:bg-[var(--color-career-primary)]/10 group-[.is-active]:text-[var(--color-career-primary)] z-10 transition-colors delay-100">
                     <div className="w-2 h-2 rounded-full bg-[var(--color-career-border)] group-[.is-active]:bg-[var(--color-career-primary)]" />
                   </div>
                   <div className="w-[calc(100%-3rem)] md:w-[calc(50%-2rem)] p-3 rounded border border-[var(--color-career-border)] bg-[#111614] shadow">
-                    <span className="text-sm font-medium text-[var(--color-career-text-muted)]">{step}</span>
+                    <span className="text-sm font-medium text-[var(--color-career-text-muted)] group-[.is-active]:text-[var(--color-career-text)]">{step}</span>
                   </div>
                 </div>
               ))}
